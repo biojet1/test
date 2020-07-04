@@ -6,6 +6,7 @@ jobs: # A basic unit of work in a run
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/python:3.6.4
+      - image: circleci/openjdk
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
       - run: echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
@@ -13,7 +14,7 @@ jobs: # A basic unit of work in a run
           command: |
             sudo pip install --upgrade pip cython
             sudo apt update
-            sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-de
+            sudo apt install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-de
             pip install buildozer --user
             git clone git://github.com/kivy/kivy-remote-shell
             cd kivy-remote-shell
