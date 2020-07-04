@@ -10,5 +10,8 @@ jobs: # A basic unit of work in a run
       - checkout # check out source code to working directory
       - run:
           command: |
-            pip install --upgrade pip
-            pip install --user buildozer
+            pip install buildozer --user
+            git clone git://github.com/kivy/kivy-remote-shell
+            cd kivy-remote-shell
+            pip install -r requirements.txt
+            buildozer
