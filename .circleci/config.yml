@@ -10,5 +10,5 @@ jobs: # A basic unit of work in a run
       - checkout # check out source code to working directory
       - run:
           command: |
-            pip install --upgarde pip
+            pip install --upgrade pip
             pip install --user buildozer
