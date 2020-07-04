@@ -12,6 +12,8 @@ jobs: # A basic unit of work in a run
       - run: echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
       - run:
           command: |
+            sudo apt-get -y install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} gstreamer1.0-{omx,alsa}
+            sudo apt-get -y install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libmtdev-dev
             sudo apt install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
             sudo pip install --upgrade pip Cython==0.29.19
             sudo apt update
