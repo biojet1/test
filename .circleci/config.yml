@@ -15,13 +15,14 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
+            sudo apt-get update >/dev/null
             sudo apt-get install -y software-properties-common
             sudo add-apt-repository -y ppa:webupd8team/java
             sudo apt-get update >/dev/null
-            sudo apt-get install oracle-java8-installer
-            javac -version
-            sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
-            sudo apt-get install default-jdk
+            # sudo apt-get install oracle-java8-installer
+            # javac -version
+            # sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
+            # sudo apt-get install default-jdk
             # gstreamer1.0-{omx,alsa}
             # sudo pip install --upgrade pip >/dev/null
             # sudo pip install buildozer >/dev/null
