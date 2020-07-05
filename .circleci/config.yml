@@ -15,10 +15,10 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
-            sudo apt-get update
-            sudo apt-get -y install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
+            sudo apt-get update >/dev/null
+            sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
+            sudo apt-get install default-jdk
             uname -a
-            sudo apt-get -y install default-jdk
             javac -version
             # gstreamer1.0-{omx,alsa}
             # sudo pip install --upgrade pip >/dev/null
