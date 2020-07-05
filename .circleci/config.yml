@@ -19,7 +19,7 @@ jobs: # A basic unit of work in a run
             javac -version
             python -V
             # apt-cache search python
-            apt python3 python3-dev
+            sudo apt-get install python3 python3-dev
             sudo pip3 install buildozer
             # sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
             # sudo apt-get install default-jdk
