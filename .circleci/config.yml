@@ -16,8 +16,8 @@ jobs: # A basic unit of work in a run
           name: install
           command: |
             sudo apt-get update >/dev/null
-            sudo apt-get install -y software-properties-common
-            sudo add-apt-repository -y ppa:webupd8team/java
+            sudo apt-get install -y software-properties-common >/dev/null
+            sudo add-apt-repository ppa:webupd8team/java -y
             sudo apt-get update >/dev/null
             # sudo apt-get install oracle-java8-installer
             # javac -version
