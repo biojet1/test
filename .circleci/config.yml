@@ -22,6 +22,7 @@ jobs: # A basic unit of work in a run
             # sudo apt-get install oracle-java8-installer
             javac -version
             python -V
+            python3 -V
             # sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
             # sudo apt-get install default-jdk
             # gstreamer1.0-{omx,alsa}
