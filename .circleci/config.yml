@@ -15,6 +15,7 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
+            javac -version
             sudo apt-get update
             sudo apt-get -y install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
             # gstreamer1.0-{omx,alsa}
