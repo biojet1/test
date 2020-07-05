@@ -15,7 +15,7 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
-            # sudo apt-get update >/dev/null
+            sudo apt-get update >/dev/null
             # javac -version
             # python -V
             # apt-cache search python
