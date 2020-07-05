@@ -1,6 +1,6 @@
 version: 2 # use CircleCI 2.0
 jobs: # A basic unit of work in a run
-  build: # runs not using Workflows must have a `build` job as entry point 
+  build: # runs not using Workflows must have a `build` job as entry point
     # directory where steps are run
     working_directory: ~/kivy1
     docker: # run the steps with Docker
@@ -9,16 +9,19 @@ jobs: # A basic unit of work in a run
       - image: circleci/openjdk
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
-      - run: echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
       - run:
+          name: environ
+          command: echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
+      - run:
+          name: install
           command: |
             sudo apt-get -y install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} gstreamer1.0-{omx,alsa}
-            sudo apt-get -y install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libmtdev-dev
-            sudo apt install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-            sudo pip install --upgrade pip Cython==0.29.19
-            sudo apt update
-            pip install buildozer --user
-            git clone git://github.com/kivy/kivy-remote-shell
-            cd kivy-remote-shell
-            pip install -r requirements.txt
-            buildozer
+            # sudo apt-get -y install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libmtdev-dev
+            # sudo apt install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+            # sudo pip install --upgrade pip Cython==0.29.19
+            # sudo apt update
+            # pip install buildozer --user
+            # git clone git://github.com/kivy/kivy-remote-shell
+            # cd kivy-remote-shell
+            # pip install -r requirements.txt
+            # buildozer
