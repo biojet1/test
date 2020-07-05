@@ -15,9 +15,10 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
+            sudo add-apt-repository ppa:webupd8team/java -y
             sudo apt-get update >/dev/null
             uname -a
-            apt-cache search jdk
+            sudo apt-get install oracle-java8-installer
             javac -version
             sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
             sudo apt-get install default-jdk
