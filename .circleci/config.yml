@@ -6,7 +6,7 @@ jobs: # A basic unit of work in a run
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/openjdk:8u252-jdk
-      - image: circleci/python:3.8.3
+      # - image: circleci/python:3.8.3
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
       - run:
@@ -15,12 +15,12 @@ jobs: # A basic unit of work in a run
       - run:
           name: install
           command: |
-            sudo apt-get update >/dev/null
-            javac -version
-            python -V
+            # sudo apt-get update >/dev/null
+            # javac -version
+            # python -V
             # apt-cache search python
-            sudo apt-get install python3 python3-dev
-            sudo pip3 install buildozer
+            sudo apt-get install -q python3 python3-dev
+            sudo python3 -m pip install buildozer
             # sudo apt-get install pkg-config libgl1-mesa-dev libgles2-mesa-dev libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} >/dev/null
             # sudo apt-get install default-jdk
             # gstreamer1.0-{omx,alsa}
