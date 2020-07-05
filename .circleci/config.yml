@@ -25,7 +25,7 @@ jobs: # A basic unit of work in a run
             # sudo apt install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
             # sudo pip install --upgrade pip Cython==0.29.19
             # sudo apt update
-            git clone git://github.com/kivy/kivy-remote-shell
-            cd kivy-remote-shell
-            pip install -r requirements.txt
+            # git clone git://github.com/kivy/kivy-remote-shell
+            # cd kivy-remote-shell
+            # pip install -r requirements.txt
             # buildozer
