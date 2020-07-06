@@ -34,8 +34,7 @@ jobs: # A basic unit of work in a run
             git clone git://github.com/kivy/kivy-remote-shell 2>/dev/null
             cd kivy-remote-shell
             echo pip3 install -r requirements.txt
-            docutils==0.12
-            sudo pip3 install Kivy Kivy-Garden pyasn1 pycrypto requests Twisted zope.interface
+            sudo pip3 install docutils Kivy Kivy-Garden pyasn1 pycrypto requests Twisted zope.interface
             # sudo pip3 install -r requirements.txt
             echo buildozer android debug
             yes | buildozer android debug
