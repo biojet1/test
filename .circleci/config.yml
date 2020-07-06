@@ -36,9 +36,9 @@ jobs: # A basic unit of work in a run
             # git clone git://github.com/kivy/kivy-launcher 2>/dev/null
             # cd kivy-launcher
             # echo pip3 install -r requirements.txt
-            sudo pip3 install  Kivy Kivy-Garden
+            sudo pip3 install  Kivy Kivy-Garden 2>/dev/null
             # pyasn1 pycrypto requests Twisted zope.interface docutils
             # sudo pip3 install -r requirements.txt
-            # echo buildozer android debug
+            echo buildozer android debug
             yes | buildozer init
             # yes | buildozer android debug
