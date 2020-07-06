@@ -41,4 +41,7 @@ jobs: # A basic unit of work in a run
             # sudo pip3 install -r requirements.txt
             echo buildozer android debug
             # yes | buildozer init
-            yes | buildozer android debug
+            yes | buildozer android debug || echo "done"
+            find . -type f -iname "*.apk"
+      - store_artifacts:
+          path: kivy-launcher/bin
