@@ -31,13 +31,14 @@ jobs: # A basic unit of work in a run
             # sudo apt-get -y install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libmtdev-dev
             # sudo apt install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
             # sudo apt update
-            git clone git://github.com/kivy/kivy-remote-shell 2>/dev/null
-            cd kivy-remote-shell
-            git clone git://github.com/kivy/kivy-launcher 2>/dev/null
-            cd kivy-launcher
+            # git clone git://github.com/kivy/kivy-remote-shell 2>/dev/null
+            # cd kivy-remote-shell
+            # git clone git://github.com/kivy/kivy-launcher 2>/dev/null
+            # cd kivy-launcher
             # echo pip3 install -r requirements.txt
             sudo pip3 install  Kivy Kivy-Garden
             # pyasn1 pycrypto requests Twisted zope.interface docutils
             # sudo pip3 install -r requirements.txt
-            echo buildozer android debug
-            yes | buildozer android debug
+            # echo buildozer android debug
+            yes | buildozer init
+            # yes | buildozer android debug
