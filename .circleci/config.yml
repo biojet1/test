@@ -14,6 +14,8 @@ jobs: # A basic unit of work in a run
           command: echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
       - run:
           name: install
+          environment:
+            BUILDOZER_ALLOW_KIVY_ORG_DOMAIN: 1
           command: |
             sudo apt-get update >/dev/null
             # javac -version
